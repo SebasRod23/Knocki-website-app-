@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Prototype | The Tribe</title>
+    <link rel="shortcut icon" href="img/output-onlinepngtools.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylesPrototype.css">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137186632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137186632-1');
+</script>
+</head>
+
+<body>
+    <nav>
+        <div class="menu-main">
+            <a href="index.html"><img src="img/output-onlinepngtools.png" class="logo"></a>
+            <a href="index.html" class="name">The <span>Tribe</span></a>
+            <div class="hamburger_menu active" id="btn-menu">
+                <span class="linea l1 "></span>
+                <span class="linea l2 "></span>
+                <span class="linea l3 "></span>
+            </div>
+        </div>
+        <div class="menu-options" id="menu-options">
+            <ul>
+                <li><a href="https://xd.adobe.com/embed/9e60e5b9-b4d2-4b27-5b7d-f9bfa8aeca45-e851/screen/37e09cbd-1649-413c-be7a-e7c7e2c6a085/Log-in/" target="_blank">Adobe XD</a></li>
+                <li><a href="personas.html">Personas</a></li>
+                <li><a href="benchmarking.html">Benchmarking</a></li>
+                <li><a href="prototype.html">Prototype</a></li>
+                <li><a href="tests.html">Tests</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--===================================================-->
+    <div class="wrapper">
+        <div class="label">
+            <img src="img/3points.png">
+            <h1>Low-level Prototype</h1>
+        </div>
+
+        <div class="low-level proto">
+
+            <div class="box">
+                <img src="img/1.png" alt="First Page" id="First">
+                <div class="description">
+                    <h1>Landing Page</h1>
+                    <p>In this first window we have two buttons so the user decides to either go to the Log In page or the Create an Account page.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/2.png" alt="Second Page" id="Second">
+                <div class="description">
+                    <h1>Login Page</h1>
+                    <p>This is the Log In Page, in this you will need to have an active email and the correct password, you have a button in case you chose Log in and you didn’t have an account</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/3.png" alt="Third Page" id="Third">
+                <div class="description">
+                    <h1>Create Account Page</h1>
+                    <p>This is the create an account where we just ask your name and the email you are going to activate, and the password you choose. There’s also an extra button in case you already had an account</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/4.png" alt="Fourth Page" id="Fourth">
+                <div class="description">
+                    <h1>User's Knockis Page</h1>
+                    <p>This is the main page, in here you will be able to see which knockis are the ones you have registered. Also, in the plus button you will be able to add new knockis, and in the hamburguer menu you will be able to see your profile and other options</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="img/5.png" alt="Fifth Page" id="5">
+
+                <div class="description">
+                    <h1>Menu</h1>
+                    <p>This is how the menu looks broken down. If you click on one of the surfaces you will be able to add more gestures, the gestures activate sounds or lights or other things. </p>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img src="img/6.png" alt="Fifth Page" id="5">
+
+                <div class="description">
+                    <h1>Add-Knocki Page</h1>
+                    <p>This is the window where you add a knocki, in here you just choose the room where is located, the last option is for general rooms.</p>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img src="img/7.png" alt="Fifth Page" id="5">
+
+                <div class="description">
+                    <h1>Location Page</h1>
+                    <p>When you choose a specific room the icon appears on top and then you give it a specific location</p>
+                </div>
+            </div>
+            
+            <div class="box">
+                <img src="img/8.png" alt="Fifth Page" id="5">
+
+                <div class="description">
+                    <h1>Sidebar</h1>
+                    <p>This is how the sidebar looks. You will be able to log out from here or change windows. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="label">
+        <img src="img/3points.png">
+        <h1>High-level Prototype</h1>
+    </div>
+    <div class="high-level proto">
+        <img src="img/app.png">
+        <div class="check">
+            <h1>CHECK OUR HIGH-LEVEL PROTOTYPE</h1>
+            <a href="Prototype/index.html" target="_blank"><button type="button" class="button">Go check it!</a>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            /*Ham button menu*/
+            $('#btn-menu').click(function() {
+                $('nav #menu-options ul').slideToggle();
+                if ($('#btn-menu').attr('class') == 'hamburger_menu active') {
+                    $('#btn-menu').removeClass('hamburger_menu active').addClass('hamburger_menu close');
+                } else {
+                    $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+                }
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

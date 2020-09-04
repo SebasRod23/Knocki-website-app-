@@ -1,0 +1,351 @@
+/******************
+     RESET CSS
+******************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/******************
+     HAM MENU
+Copy in every page
+******************/
+
+/******************
+    For Desktop
+  (800px-foward)
+******************/
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    position: sticky;
+    position: -webkit-sticky;
+    color: white;
+    top: 0;
+    z-index: 1;
+}
+
+nav .menu-main img {
+    height: 40px;
+    margin: 0 20px;
+}
+
+nav .menu-main .logo {
+    float: left;
+}
+
+nav .menu-main a {
+    line-height: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    float: left;
+    font-weight: 100;
+}
+
+nav .menu-main a span {
+    font-weight: 400;
+}
+
+nav .menu-main .hamburger_menu {
+    height: 30px;
+    width: 25px;
+    position: relative;
+    float: right;
+    margin: 5px 20px 0 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .menu-main .hamburger_menu .linea {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+
+/****
+$('#btn-menu').click(function(){
+            $('.hamburger_menu').toggleClass('close')
+        });
+***/
+nav .menu-main .hamburger_menu.active .l1 {
+    top: 20%;
+}
+
+nav .menu-main .hamburger_menu.active .l2 {
+    top: 50%;
+}
+
+nav .menu-main .hamburger_menu.active .l3 {
+    top: 80%;
+}
+
+nav .menu-main .hamburger_menu.close .l1 {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+nav .menu-main .hamburger_menu.close .l2 {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+nav .menu-main .hamburger_menu.close .l3 {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+nav .menu-options {
+    width: auto;
+    float: right;
+    font-size: 12px;
+    height: 40px;
+    background-color: #222;
+    border-left: 1px solid white;
+}
+
+nav .menu-options ul {
+    display: block;
+}
+
+nav .menu-options ul li {
+    float: right;
+    height: 40px;
+    list-style-type: none;
+    transform-origin: 50%;
+    transition: .3s;
+    color: white;
+}
+
+nav .menu-options ul li a {
+    display: block;
+    height: auto;
+    color: white;
+    width: 80px;
+    padding: 11px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav .menu-options ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+nav .menu-options ul li:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+nav .menu-options ul li .last {
+    padding: 3px 20px;
+}
+
+/******************
+ For Smarthphone
+  (300px-880px)
+******************/
+@media screen and (max-width:880px) {
+
+    nav .menu-main a{
+        float: none;
+    }
+    nav .menu-main a .logo{
+        margin-right: 0;
+    }
+    nav .menu-main .hamburger_menu{
+        display: block;
+    }
+    nav .menu-options{
+        width: 100%;
+        height: auto;
+        border-left: 0;
+        background-color: #222;
+        position: absolute;
+    }
+    nav .menu-options ul li{
+        float: none;
+        display: block;
+    }
+    nav .menu-options ul li a{
+        margin: 0 auto;
+        width: auto;
+        padding: 11px 20px;
+    }
+    nav .menu-options ul{
+        display: none;
+    }
+    nav .menu-options ul li::after {
+        display: none;
+    }
+}
+/******************
+ For Smarthphone
+  (0px-300px)
+******************/
+@media screen and (max-width:300px) {
+    nav .menu-main {
+        border: 0;
+    }
+
+    nav .menu-main a {
+        display: none;
+    }
+
+    nav .menu-main .name {
+        display: none;
+    }
+
+    nav .menu-main .hamburger_menu {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        clear: both;
+    }
+}
+
+
+/******************
+      LABELS
+******************/
+.label {
+    margin: 1.5% 0;
+    background-color: #d9faeb;
+    width: 100%;
+    display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.label img {
+    width: 80px;
+    margin: 1% auto;
+}
+
+.label h1 {
+    font-size: 30px;
+    margin-bottom: 1%;
+}
+
+@media screen and (max-width: 880px) {
+
+    .label img {
+        width: 10%;
+        margin: 1% auto;
+    }
+
+    .label h1 {
+        font-size: 3vw;
+        margin-bottom: 1%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+
+}

@@ -1,0 +1,157 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #F8F8F8;
+}
+
+#knockilogo {
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 83px;;
+}
+
+section#main span{
+  background-color: #D9F4EB;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  padding: 20px 0;
+  margin-top: 26px;
+  color: black;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.button{
+    background-color: #D9F4EB;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    padding: 20px 0;
+    margin-top: 26px;
+    color: black;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+
+#orline{
+  width: 70%;
+  margin-bottom: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input{
+  width: 100%;
+  font-size: 16px;
+}
+
+section#main form, section#login form{
+    width: 80vw;
+    margin: 100px auto;
+    position: absolute;
+    bottom: 0;
+    left: 10vw;
+}
+
+#createaccount-btn{
+  opacity: 0.7;
+  margin-top: 0;
+}
+
+section#login #typein{
+  padding: 16px;
+  width: 90%;
+  border: 1px solid #707070;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  background-color: transparent;
+}
+
+section#login #buttonlogin{
+  margin-top: 55px;
+}
+
+section#login p{
+  display: inline-block;
+  margin-right: 15px;
+  margin-left: 43px;
+  font-size: 14px;
+  color: #4B4B4B;
+  margin-top: 15px;
+}
+section#login span{
+  font-size: 13px;
+  color: #3DA07F;
+  text-decoration: underline;
+}
+
+section#create-account #typein{
+  padding: 16px;
+  width: 90%;
+  border: 1px solid #707070;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+h3{
+  font-size: 22px;
+  color: #4B4B4B;
+  text-align: center;
+  opacity: 0.8;
+}
+
+section#create-account form{
+  width: 80vw;
+  margin: 10px auto 100px auto;
+  bottom: 20px;
+  left: 10vw;
+
+}
+
+section#create-account #accountbutton{
+  color: #434242;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+section#create-account  p{
+  display: inline-block;
+  margin-left: 63px;
+  font-size: 14px;
+  color: #4B4B4B;
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+section#create-account  span{
+  font-size: 13px;
+  color: #3DA07F;
+  text-decoration: underline;
+  opacity: 0.8;
+}

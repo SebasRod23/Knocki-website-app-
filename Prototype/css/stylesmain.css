@@ -1,0 +1,1459 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(248, 248, 248);
+}
+
+/*Header*/
+header {
+    display: flex;
+    align-items: center;
+}
+
+#knockilogosmall {
+    width: 40vw;
+    position: relative;
+    margin: 0 15%;
+}
+
+#plus {
+    width: 7%;
+    display: inline-block;
+    margin-right: 2%;
+    margin-top: 0;
+}
+
+header #back {
+    display: none;
+    width: 4%;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+#hamburguer {
+    width: 7%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#yourknockis {
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 200;
+}
+
+/*Menu Kitchen*/
+.menu-1 {
+    background-color: #D9F4EB;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.kitchen {
+    float: left;
+    width: 25px;
+    margin-left: 10px;
+}
+
+.arrow {
+    float: right;
+    width: 15px;
+    margin-right: 10px;
+    transform: rotate(-90deg);
+}
+
+.menu-1 p {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 20px;
+    opacity: 0.8;
+    margin-bottom: 2px;
+}
+
+/* displayed menu */
+.knocki1 {
+    width: 50px;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+#menu-up {
+    background-color: rgb(248, 248, 248);
+    position: fixed;
+    z-index: 10;
+}
+
+
+
+
+
+
+/*******************
+    MY PRINCIPAL
+*******************/
+#principal .room {
+    margin-bottom: 10%;
+}
+
+#principal .room .room-info {
+    background-color: #D9F4EB;
+    margin-top: 2%;
+    width: 100%;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#principal .room .room-info .img {
+    width: 20vw;
+}
+
+#principal .room .room-info .room-img {
+    width: 6vw;
+    margin: auto 7vw;
+}
+
+#principal .room .room-info .biggest {
+    width: 15vw;
+    margin: auto 2.5vw;
+}
+
+#principal .room .room-info .bigger {
+    width: 10vw;
+    margin: auto 5vw;
+}
+
+#principal .room .room-info .big {
+    width: 8vw;
+    margin: auto 6vw;
+}
+
+#principal .room .room-info .name {
+    font-size: 7vw;
+    font-weight: 400;
+    margin-right: 10%;
+    width: 50vw;
+}
+
+#principal .room .room-info .key {
+    width: 4vw;
+    transform: rotate(-90deg);
+    float: none;
+    margin-right: 7.5%;
+    transition: .05s;
+    z-index: 0;
+}
+
+/*Toogle class*/
+#principal .room .room-info .open {
+    transform: rotate(90deg);
+}
+
+#principal .room .knockisIn {
+    background-color: #F0F5F4;
+    display: none;
+}
+
+#principal .room .knockisIn .knocki {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#principal .room .knockisIn .knocki .photo {
+    width: 12.5vw;
+    height: 12.5vw;
+    margin-left: 12.5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#principal .room .knockisIn .k-info {
+    /*margin-left: 25%;*/
+    margin-right: 5%;
+    width: 50vw;
+    max-width: 50vw;
+    text-align: center;
+}
+
+#principal .room .knockisIn .k-info .location {
+    font-size: 5vw;
+    font-weight: 400;
+    color: #1C1C1C;
+}
+
+
+div.menu {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    z-index: 10;
+    background-color: white;
+}
+
+.menu .info .user_photo {
+    width: 50%;
+    margin: 5% auto;
+}
+
+.options,
+.options ul,
+.options ul li {
+    list-style: none;
+}
+
+.hamburger_menu {
+    height: 30px;
+    width: 25px;
+    position: relative;
+    margin: 5px 20px 0 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger_menu .linea {
+    height: 3px;
+    width: 100%;
+    background: #000;
+    border-radius: 10px;
+    position: absolute;
+    transition: all .2s;
+}
+
+/****
+$('#btn-menu').click(function(){
+            $('.hamburger_menu').toggleClass('close')
+        });
+***/
+
+.hamburger_menu.active .l1 {
+    top: 20%;
+}
+
+
+.hamburger_menu.active .l2 {
+    top: 50%;
+}
+
+
+.hamburger_menu.active .l3 {
+    top: 80%;
+}
+
+
+.hamburger_menu.close .l1 {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+
+.hamburger_menu.close .l2 {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.hamburger_menu.close .l3 {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.info {
+    margin-bottom: 5%;
+    margin-top: 20%;
+    background-color: #D9F4EB;
+}
+
+.options ul li {
+    line-height: 350%;
+
+}
+
+.options ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu {
+    left: -100%;
+    transition: 0.3s;
+}
+
+div.show {
+    left: 0;
+    position: fixed;
+    transition: 0.3s;
+}
+
+.info .user-name {
+    font-size: 5vw;
+    font-weight: bold;
+    margin-bottom: 7%;
+}
+
+.info .amount-knocki {
+    font-size: 4vw;
+    padding-bottom: 4%;
+}
+
+/**********************
+        PROFILE
+************************/
+#profile {
+    display: none;
+}
+
+.profile .user_photo {
+    width: 50%;
+    margin: 10% 25% 5% 25%;
+}
+
+.edit {
+    width: 7%;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.profile-info {
+    width: 75%;
+    margin: 5% 12.5%;
+    clear: both;
+    display: flex;
+    font-size: 4vw;
+    justify-content: space-around;
+}
+
+.profile-info h1 {
+    float: left;
+    margin: 3% 0;
+}
+
+.profile-info h1:first-child {
+    font-weight: bold;
+}
+
+.profile-info .email {
+    font-size: 3vw;
+}
+
+/*******************
+      SETTINGS
+*******************/
+section#settings {
+    display: none;
+}
+
+.settings .switches .switch {
+    background: url(../img/switch2.png);
+    background-size: 100%;
+    background-position: 0 85%;
+    cursor: pointer;
+}
+
+.switch.active {
+    background-position: 0 0;
+}
+
+.switches {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 0 15% 7.5% 15%;
+}
+
+.settings .switches h1 {
+    width: 85%;
+}
+
+/*******************
+      ADD
+*******************/
+#add p {
+    width: 70%;
+    font-size: 5vw;
+    line-height: 7.5vw;
+    text-align: center;
+    margin: 10% 15% 3% 15%;
+}
+
+#add .sub {
+    font-size: 4vw;
+}
+
+#add #knocki {
+    width: 30%;
+    margin: 0 35% 10% 35%;
+}
+
+.bttn {
+    background-color: rgb(217, 244, 235);
+    color: black;
+    border-bottom: 3px solid #666;
+    border-radius: 10px;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 5vw;
+    padding: 2% 5%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.second {
+    width: 30%;
+    margin: 5% 30%;
+    background-color: rgb(232, 246, 241);
+    color: #222;
+    font-size: 5vw;
+    padding: 3% 5%;
+}
+
+.loading {
+    position: absolute;
+    top: 85vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loading-bar {
+    display: inline-block;
+    width: 4px;
+    height: 30px;
+    border-radius: 4px;
+    animation: loading 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(1) {
+    background-color: rgb(217, 227, 224);
+    animation-delay: 0;
+}
+
+.loading-bar:nth-child(2) {
+    background-color: rgb(161, 247, 218);
+    animation-delay: 0.09s;
+}
+
+.loading-bar:nth-child(3) {
+    background-color: rgb(176, 180, 178);
+    animation-delay: .18s;
+}
+
+.loading-bar:nth-child(4) {
+    background-color: rgb(130, 234, 199);
+    animation-delay: .27s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1, 2.2);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+/*******************
+      ADD
+*******************/
+
+#detected #knocki {
+    width: 30%;
+    margin: 7.5% 35% 5% 35%;
+}
+
+#detected h1 {
+    width: 80%;
+    font-size: 5vw;
+    line-height: 7.5vw;
+    text-align: center;
+    margin: 5% 10% 2% 10%;
+}
+
+#detected h2 {
+    width: 60%;
+    font-size: 4.5vw;
+    line-height: 7.5vw;
+    text-align: center;
+    margin: 0 20% 5% 20%;
+    color: rgb(184, 196, 193);
+}
+
+/*******************
+      ADD-INFO
+*******************/
+#add-info .form {
+    color: #999;
+    font-weight: 400;
+    width: 80%;
+    height: 7vw;
+    font-size: 4vw;
+    margin: 5% 10% 10% 10%;
+    padding: 4vw;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#add-info .form:first-child {
+    margin-top: 10%;
+}
+
+/*******************
+      LOADING
+*******************/
+.loader {
+    margin: 5% auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid rgb(166, 214, 198);
+    width: 50vw;
+    height: 50vw;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loading p {
+    width: 60%;
+    font-size: 6vw;
+    line-height: 7.5vw;
+    text-align: center;
+    margin: 10% 20%;
+}
+
+/*******************
+      READY
+*******************/
+#ready #knocki {
+    width: 50%;
+    margin: 20% 25% 10% 25%;
+}
+
+#ready p {
+    width: 60%;
+    font-size: 5vw;
+    line-height: 7.5vw;
+    text-align: center;
+    margin: 0 20%;
+}
+
+/*******************
+      ERROR
+*******************/
+.error {
+    font-size: 5vw;
+    color: red;
+    text-align: center;
+    width: 70%;
+    margin: 2% 15%;
+    font-weight: 100;
+}
+
+#menu-up #back,
+#menu-up #plus,
+.room-info .key,
+.room .knockisIn .knocki,
+.bttn,
+.button,
+.apps .app,
+.actions .action,
+.sequence-keyboard .options .option,
+.gestures .plus,
+.del,
+.menu li {
+    cursor: pointer;
+}
+
+/**********************
+        Details
+**********************/
+#knocki-details .flexbox {
+    display: flex;
+    align-items: center;
+}
+
+#knocki-details .device .photo {
+    width: 30vw;
+    margin-left: 7.5%;
+}
+
+#knocki-details .device .k-info {
+    font-size: 6vw;
+    margin-left: 10%;
+    font-weight: bold;
+    width: 50vw;
+}
+
+#knocki-details .device .k-info .location {
+    font-size: 5vw;
+    font-weight: normal;
+    margin-bottom: 7.5%;
+}
+
+#knocki-details .device .k-info h3,
+#knocki-details .device .k-info .id {
+    font-size: 3.5vw;
+    font-weight: 100;
+}
+
+/**********************
+        GESTURE
+**********************/
+#knocki-details .gestures .label,
+#knocki-details .add-gesture .label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+    background-color: #D9F4EB;
+    padding: 2%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#knocki-details .gestures .label .title,
+#knocki-details .add-gesture .label .title {
+    margin-left: 5%;
+    font-size: 5vw;
+    font-weight: bold;
+}
+
+#knocki-details .gestures .label .plus {
+    width: 7vw;
+    height: 7vw;
+    margin-left: 60%;
+}
+
+#knocki-details .gestures .gesture-list .gesture {
+    background-color: rgb(238, 247, 244);
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    justify-content: space-between;
+    height: 25vw;
+    max-height: 25vw;
+}
+
+#knocki-details .gestures .gesture-list {
+    background-color: rgb(248, 248, 248);
+}
+
+#knocki-details .gestures .gesture-list .gesture .detail .combo {
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+}
+
+#knocki-details .gestures .gesture-list .gesture .detail .combo img {
+    width: 3vw;
+    margin-right: 3%;
+}
+
+#knocki-details .gestures .gesture-list .gesture .detail .combo img:last-child {
+    margin-right: 0;
+}
+
+#knocki-details .gestures .gesture-list .gesture .detail h1 {
+    font-size: 3.5vw;
+    font-weight: bold;
+}
+
+#knocki-details .gestures .gesture-list .gesture .detail h2 {
+    font-size: 2.5vw;
+    font-weight: 100;
+}
+
+#knocki-details .gestures .gesture-list .gesture .switch {
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+#knocki-details .gestures .gesture-list .gesture .logo {
+    width: 25vw;
+    margin-left: 10%;
+}
+
+#knocki-details .gestures .gesture-list .gesture .invert {
+    filter: invert(55%);
+}
+
+#knocki-details .gestures .gesture-list .gesture .smaller {
+    width: 15vw;
+    margin-left: 15%;
+}
+
+#knocki-details .gestures .gesture-list .gesture .smallest {
+    width: 12.5vw;
+    margin-left: 15%;
+}
+
+#knocki-details .gestures .gesture-list .gesture .detail {
+    margin-right: 10%;
+    width: 40vw;
+}
+
+/* Customize the label (the container) */
+.gesture .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 5%;
+}
+
+/* Hide the browser's default checkbox */
+.gesture .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.gesture .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(238, 247, 244);
+    border: 1px solid black;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: rgb(238, 247, 244);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*******************
+    Add gesture
+*******************/
+#knocki-details .add-gesture .apps {
+    background-color: rgb(248, 248, 248);
+}
+
+#knocki-details .add-gesture .apps .app {
+    background-color: rgb(238, 247, 244);
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    height: 20vw;
+    max-height: 20vw;
+    justify-content: space-between;
+}
+
+#knocki-details .add-gesture .apps .app .logo {
+    width: 20vw;
+    margin-left: 14.5%;
+}
+
+#knocki-details .add-gesture .apps .app img.smaller {
+    width: 10vw;
+    margin-left: 19.5%;
+}
+
+#knocki-details .add-gesture .apps .app img.smallest {
+    width: 6.5vw;
+    margin-left: 21.5%;
+}
+
+#knocki-details .add-gesture .apps .app .invert {
+    filter: invert(55%);
+}
+
+/*
+#knocki-details .add-gesture .apps .app .grey{
+    filter: grayscale(100%);
+}*/
+#knocki-details .add-gesture .apps .app .app-name {
+    margin-right: 10%;
+    font-size: 7vw;
+    font-weight: 500;
+    text-align: center;
+    width: 40vw;
+}
+
+#knocki-details .add-gesture .apps .app h1.smaller {
+    font-size: 5.5vw;
+    width: 40vw;
+}
+
+/*******************
+    Add action
+*******************/
+#knocki-details .add-action .label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 15vw;
+    max-height: 10vw;
+    margin-top: 15%;
+    background-color: #D9F4EB;
+    justify-content: flex-start;
+}
+
+#knocki-details .add-action .label .logo {
+    width: 9.44vw;
+    margin-left: 5%;
+}
+
+#knocki-details .add-action .label img.smaller {
+    width: 7vw;
+    margin-left: 7%;
+}
+
+#knocki-details .add-action .label img.smallest {
+    width: 4vw;
+    margin-left: 10%;
+}
+
+#knocki-details .add-action .label .invert {
+    filter: invert(55%);
+}
+
+#knocki-details .add-action .label .app-name {
+    margin-left: 10%;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #444;
+}
+
+#knocki-details .add-action .subtitle {
+    font-size: 4vw;
+    padding-left: 5%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    color: #3b3b3b;
+    background-color: rgb(248, 248, 248);
+}
+
+#knocki-details .add-action .actions {
+    background-color: rgb(248, 248, 248);
+}
+
+#knocki-details .add-action .actions .action {
+    background-color: rgb(238, 247, 244);
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+#knocki-details .add-action .actions .action .action-name {
+    font-size: 4vw;
+    margin-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    font-weight: 500;
+}
+
+/*******************
+    Add sequence
+*******************/
+#knocki-details .sequence .label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 15vw;
+    max-height: 10vw;
+    margin-top: 15%;
+    background-color: #D9F4EB;
+    justify-content: flex-start;
+}
+
+#knocki-details .sequence .label .logo {
+    width: 9.44vw;
+    margin-left: 5%;
+}
+
+#knocki-details .sequence .label img.smaller {
+    width: 15vw;
+    margin-left: 20%;
+}
+
+#knocki-details .sequence .label img.smallest {
+    width: 10vw;
+    margin-left: 22.5%;
+}
+
+#knocki-details .sequence .label .invert {
+    filter: invert(55%);
+}
+
+#knocki-details .sequence .label img.smaller {
+    width: 7vw;
+    margin-left: 7%;
+}
+
+#knocki-details .sequence .label img.smallest {
+    width: 4vw;
+    margin-left: 10%;
+}
+
+#knocki-details .sequence .label img.invert {
+    filter: invert(55%);
+}
+
+#knocki-details .sequence .label .app-name {
+    margin-left: 10%;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #444;
+}
+
+#knocki-details .sequence .action {
+    background-color: rgb(238, 247, 244);
+    display: flex;
+    align-items: center;
+    padding-bottom: 5%;
+    margin-top: 3%;
+}
+
+#knocki-details .sequence .action .action-name {
+    font-size: 4vw;
+    margin-left: 15%;
+    padding-top: 3%;
+    font-weight: 500;
+}
+
+#knocki-details .sequence .sequence-keyboard {
+    padding-bottom: 5%;
+    padding-top: 5%;
+    background-color: rgb(248, 248, 248);
+    margin-bottom: 0;
+}
+
+#knocki-details .sequence .sequence-keyboard h1 {
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+#knocki-details .sequence .sequence-keyboard .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4% auto;
+}
+
+#knocki-details .sequence .sequence-keyboard .options .option {
+    margin: auto 5%;
+}
+
+#knocki-details .sequence .sequence-keyboard .options #dot {
+    width: 8vw;
+}
+
+#knocki-details .sequence .sequence-keyboard .options #line {
+    height: 3vw;
+}
+
+#knocki-details .sequence .button {
+    padding: 6%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    width: 25%;
+    text-align: center;
+    font-size: 5vw;
+    background-color: rgb(217, 244, 235);
+    color: black;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    font-weight: 400;
+    cursor: pointer;
+    margin: auto 31.5%;
+    margin-bottom: 15%;
+}
+
+#knocki-details .sequence .sequence-keyboard .selected {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 7.5% auto;
+    margin-bottom: 2%;
+}
+
+#knocki-details .sequence .bottom {
+    background-color: rgb(248, 248, 248);
+    margin: 0;
+}
+
+#knocki-details .sequence .sequence-keyboard .selected .selection {}
+
+#knocki-details .sequence .sequence-keyboard .selected .dot {
+    width: 5vw;
+}
+
+#knocki-details .sequence .sequence-keyboard .selected .line {
+    height: 3vw;
+}
+
+#knocki-details .sequence .error {
+    color: red;
+    font-size: 4vw;
+    text-align: center;
+}
+
+#knocki-details .sequence .del {
+    width: 5vw;
+    margin: auto 47.4%;
+    margin-bottom: 5%;
+}
+
+
+#add-info .selection-room {
+    padding-top: 5%;
+}
+
+#add-info .selection-room .id {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 7.5vw;
+    font-weight: bold;
+}
+
+#add-info .selection-room #rooms-list .room {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vw;
+    background-color: #D9F4EB;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+#add-info .selection-room #rooms-list .selected {
+    background-color: rgba(46, 250, 181, 0.59);
+    border: 3px solid black;
+    margin-left: .25%;
+    font-weight: bold;
+}
+
+#add-info .selection-room #rooms-list .room .image {
+    width: 7.5vw;
+    margin-left: 10%;
+}
+
+#add-info .selection-room #rooms-list .room .name {
+    font-size: 6.5vw;
+    width: 70%;
+}
+
+#add-info .selection-room .available {
+    font-size: 7vw;
+    margin-left: 7.5%;
+    color: #555;
+    margin-bottom: 2.5%;
+}
+
+#add-info .selection-room #add {
+    width: 25vw;
+    padding: 1% 3%;
+    background-color: rgba(215, 237, 230, 0.61);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 5vw;
+    border-bottom: 2px solid #888;
+    margin-bottom: 5%;
+}
+
+#add-info #create #selection-images .row {
+    clear: both;
+    height: 12vw;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#add-info #create #selection-images .image {
+    width: 13vw;
+    height: 13vw;
+    border: 1px solid #444;
+    background-color: rgba(97, 230, 185, 0.26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: auto 2%;
+    margin-bottom: 5%;
+}
+
+#add-info #create #selection-images .image:first-child {
+    margin-left: 6%;
+}
+
+#add-info #create #selection-images .image:last-child {
+    margin-right: 6%;
+}
+
+#add-info #create #selection-images h1 {
+    font-size: 7vw;
+    text-align: center;
+    color: #333;
+    margin-bottom: 2.5%;
+}
+
+#add-info #create #selection-images .image img {
+    width: 40%;
+    filter: invert(10%);
+}
+
+#add-info #create #selection-images .big img {
+    width: 60%;
+}
+
+#add-info #create #selection-images .bigger img {
+    width: 80%;
+}
+
+#add-info #create #selection-images .biggest img {
+    width: 100%;
+}
+
+#add-info #create #selection-images .selected {
+    background-color: rgba(1, 245, 163, 0.99);
+    border: 3px solid black;
+}
+
+#add-info .selection-room #accept {
+    width: 25vw;
+    padding: 1% 3%;
+    background-color: rgba(215, 237, 230, 0.61);
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 5vw;
+    border-bottom: 2px solid #888;
+    margin-bottom: 5%;
+}
+
+#add-info .selection-room #rooms-list .room .biggest {
+    width: 15vw;
+    margin-left: 6%;
+}
+
+#add-info .selection-room #rooms-list .room .bigger {
+    width: 12.5vw;
+    margin-left: 7.5%;
+}
+
+#add-info .selection-room #rooms-list .room .big {
+    width: 10vw;
+    margin-left: 10%;
+}
+
+#knocki-details #eliminate {
+    width: 70%;
+    padding: 2.5% 1%;
+    background-color: rgba(255, 0, 0, 0.87);
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 3px solid #333;
+    margin: 0 5%;
+}
+
+#knocki-details #edit {
+    width: 70%;
+    padding: 2.5% 1%;
+    background-color: #c1c0c0;
+    font-size: 5vw;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 3px solid #333;
+    float: left;
+    margin: 0 5%;
+}
+
+#knocki-details .bttns {
+    width: 50%;
+    margin-left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bttns .switch {
+    position: relative;
+    display: inline-block;
+    width: 15vw;
+    height: 7vw;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+}
+
+.bttns .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.bttns .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.bttns .slider:before {
+    position: absolute;
+    content: "";
+    height: 6vw;
+    width: 6vw;
+    left: 7.5%;
+    bottom: 7.5%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.bttns input:checked + .slider {
+    background-color: #61fac7;
+}
+
+.bttns input:focus + .slider {
+    box-shadow: 0 0 1px #61fac7;
+}
+
+.bttns input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.bttns .slider.round {
+    border-radius: 34px;
+}
+
+.bttns .slider.round:before {
+    border-radius: 50%;
+}
+.settings .switch {
+    position: relative;
+    display: inline-block;
+    width: 15vw;
+    height: 7vw;
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+}
+
+.settings .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.settings .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.settings .slider:before {
+    position: absolute;
+    content: "";
+    height: 6vw;
+    width: 6vw;
+    left: 7.5%;
+    bottom: 7.5%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.settings input:checked + .slider {
+    background-color: #61fac7;
+}
+
+.settings input:focus + .slider {
+    box-shadow: 0 0 1px #61fac7;
+}
+
+.settings input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.settings .slider.round {
+    border-radius: 34px;
+}
+
+.settings .slider.round:before {
+    border-radius: 50%;
+}

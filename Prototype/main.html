@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139072833-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139072833-1');
+
+    </script>
+
+    <!-- Begin Inspectlet Asynchronous Code -->
+    <script type="text/javascript">
+        (function() {
+            window.__insp = window.__insp || [];
+            __insp.push(['wid', 707318181]);
+            var ldinsp = function() {
+                if (typeof window.__inspld != "undefined") return;
+                window.__inspld = 1;
+                var insp = document.createElement('script');
+                insp.type = 'text/javascript';
+                insp.async = true;
+                insp.id = "inspsync";
+                insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=707318181&r=' + Math.floor(new Date().getTime() / 3600000);
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(insp, x);
+            };
+            setTimeout(ldinsp, 0);
+        })();
+
+    </script>
+    <!-- End Inspectlet Asynchronous Code -->
+
+    <title>Knockis</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,500,800|Pacifico" rel="stylesheet">
+    <link rel="shortcut icon" href="img/knocki.png" type="image/x-icon" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/store.everything.min.js"></script>
+    <link href="css/stylesmain.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Menu-->
+    <div id="slide" class="menu">
+
+        <div class="info">
+            <img class="user_photo" src="../img/user.png">
+            <h1 class="user-name"><span class="name"></span><br><span class="surname"></span></h1>
+            <h2 class="amount-knocki"><span class="nKnockis"></span> Knockis</h2>
+        </div>
+        <div class="options">
+            <ul>
+                <li id="knockis"><a>Knockis</a></li>
+                <li><a href="https://twitter.com/knocki?lang=en" target="_blank">Help</a></li>
+                <li id="account"><a>My Account</a></li>
+                <li id="settings"><a>Settings</a></li>
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <header id="menu-up">
+        <div class="hamburger_menu active" id="btn-menu">
+            <span class="linea l1 "></span>
+            <span class="linea l2 "></span>
+            <span class="linea l3 "></span>
+        </div>
+        <img id="knockilogosmall" src="img/knockilogosmall.png" alt="">
+        <img id="plus" src="img/plussign.png" alt="">
+        <img id="back" src="img/arrow.png" style="display: none;">
+    </header>
+
+    <section id="principal">
+        <br><br><br><br>
+        <p id="yourknockis">Your knockis</p>
+        <!--Template for area-->
+        <div id="rooms">
+        </div>
+        <!--    <div class="room r1">
+            <div class="room-info">
+                <img class="room-img" src="img/kitchen.png"> -------ROOM IMAGE
+                <h1 class="name">Kitchen</h1>   -------ROOM NAME
+                <img class="key" src="img/arrow.png"> -------ACCESS
+            </div>
+            <div class="knockisIn">
+
+                ----------------KNOCKI TEMPLATE---------------------------
+                <div class="knocki knocki-1">
+                    <img class="photo" src="img/knocki.png"> -------IMAGE FOR ALL
+                    <div class="k-info">
+                        <h1 class="location">Under the table</h1> -------LOCATION
+                        <h2 class="#gestures"><span class="number">2</span> gestures</h2> -------#GESTURES
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+    <section id="profile">
+        <br><br>
+        <div class="profile">
+            <img class="user_photo" src="../img/user.png" alt="Edit">
+            <div class="profile-info">
+                <h1>Name: </h1>
+                <h1 class="name"></h1>
+            </div>
+            <div class="profile-info">
+                <h1>Surname: </h1>
+                <h1 class="surname"></h1>
+            </div>
+            <div class="profile-info">
+                <h1>Email: </h1>
+                <h1 class="email"></h1>
+            </div>
+            <div class="profile-info">
+                <h1>Number of Knockis: </h1>
+                <h1 class="nKnockis"></h1>
+            </div>
+        </div>
+    </section>
+    <section id="settings">
+        <br><br><br>
+        <div class="settings">
+            <div class="switches">
+                <h1>Allow notifications</h1>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round" id="s-1"></span>
+                </label>
+            </div>
+            <div class="switches">
+                <h1>Track my location</h1>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round" id="s-2"></span>
+                </label>
+            </div>
+            <div class="switches">
+                <h1>Update automatically</h1>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round" id="s-3"></span>
+                </label>
+            </div>
+        </div>
+    </section>
+    <section id="add" style="display: none;">
+        <p>Please, turn on your Knocki device and activate the bluetooth</p>
+        <img src="img/knocki.png" id="knocki">
+        <p class="sub">Looking for a new device...</p>
+        <div class="loading">
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+        </div>
+        <div class="bttn second">Cancel</div>
+    </section>
+    <section id="detected" style="display: none;">
+        <img src="img/knocki.png" id="knocki">
+        <h1>New Knocki detected!</h1>
+        <h2 class="knockiID"></h2>
+        <div class="bttn" id="register">REGISTER</div>
+        <div class="bttn second" id="cancel">Cancel</div>
+    </section>
+    <!--<section id="add-info" style="display: none;">-->
+    <section id="add-info" style="display: none">
+        <div class="selection-room">
+            <h1 class="available">Available rooms</h1>
+            <div id="rooms-list">
+                <!--Template for rooms-->
+                <!--
+                <div class="room">
+                    <img class="image" src="img/kitchen.png">
+                    <h1 class="name">Kitchen</h1>
+                </div>-->
+            </div>
+            <div id="create" style="display: none">
+                <form>
+                    <input type="text" maxlength="" placeholder="Room   (e.g. Kitchen)" id="room" class="form">
+                </form>
+                <div id="selection-images">
+                    <h1>Select an image</h1>
+                    <div class="row">
+                        <div class="image" id="blender">
+                            <img src="img/blender.png">
+                        </div>
+                        <div class="image biggest" id="sofa">
+                            <img src="img/sofa.png">
+                        </div>
+                        <div class="image bigger" id="bed">
+                            <img src="img/bed.png">
+                        </div>
+                        <div class="image big" id="toilet">
+                            <img src="img/toilet.png">
+                        </div>
+                        <div class="image bigger" id="tv">
+                            <img src="img/tv.png">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="image bigger" id="table">
+                            <img src="img/table.png">
+                        </div>
+                        <div class="image bigger" id="car">
+                            <img src="img/car.png">
+                        </div>
+                        <div class="image biggest" id="stairs">
+                            <img src="img/stairs.png">
+                        </div>
+                        <div class="image biggest" id="washing">
+                            <img src="img/washing.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="add">Add room</div>
+            <div id="accept" style="display: none">Accept</div>
+            <h1 class="id"></h1>
+            <form>
+                <input type="text" maxlength="" placeholder="Location   (e.g. Under the bed)" id="location" class="form">
+            </form>
+            <p class="error" id="add-error"></p>
+
+        </div>
+        <p class="error" id="fnsh"></p>
+        <div class="bttn" id="finish">FINISH</div>
+    </section>
+    <section id="loading" style="display: none;">
+        <p>Configuring your new Knocki</p>
+        <div class="loader"></div>
+        <p>Please wait...</p>
+    </section>
+    <section id="ready" style="display: none;">
+        <img src="img/knocki.png" id="knocki">
+        <p>READY!</p>
+    </section>
+    <section id="knocki-details" style="display: none;">
+        <br><br><br>
+        <div class="device">
+            <div class="flexbox">
+                <img class="photo" src="img/knocki.png">
+                <div class="k-info">
+                    <!--<h1 class="name"></h1>-->
+                    <!--ROOM NAME-->
+                    <!--<h2 class="location"></h2>-->
+                    <!--LOCATION-->
+                    <!--<h3 class="#gestures"><span class="number"></span> gestures</h3>-->
+                    <!--#KNOCKIS-->
+                </div>
+            </div>
+            <div class="bttns">
+                <!--<div id="edit">Edit</div>-->
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+                <div id="eliminate">Delete</div>
+            </div>
+        </div>
+        <div class="gestures info">
+            <div class="label">
+                <h1 class="title">Gestures</h1>
+                <img class="plus" src="img/plussign.png">
+            </div>
+            <div class="gesture-list">
+                <!--GESTURES TEMPLATE-->
+                <!--            <div class="gesture">
+                    <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <img src="img/spotify.png" class="logo"> ------APP IMAGE
+                    <div class="detail">
+                        <div class="combo"> -----SEQUENCE
+                            <img src="img/dot.png">    
+                            <img src="img/line.png">
+                        </div>
+                        <h1 class="app">Spotify</h1> ------APP NAME
+                        <h2 class="action">Play/Stop music</h2> ------ACTION
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="add-gesture info">
+            <div class="label">
+                <h1 class="title">Select the app</h1>
+            </div>
+            <div class="apps">
+                <!--APP TEMPLATE-->
+                <!--ESTA LA TENGO QUE HACER YO MANUALMENTE-->
+                <div class="app" id="spotify">
+                    <img src="img/spotify.png" class="logo invert">
+                    <h1 class="app-name">Spotify</h1>
+                </div>
+                <div class="app" id="nest">
+                    <img src="img/nest.png" class="logo">
+                    <h1 class="app-name">Nest</h1>
+                </div>
+                <div class="app" id="phone">
+                    <img src="img/phone.png" class="logo invert">
+                    <h1 class="app-name smaller">Find my phone</h1>
+                </div>
+                <div class="app" id="facebook">
+                    <img src="img/facebook.png" class="logo smaller">
+                    <h1 class="app-name">Facebook</h1>
+                </div>
+                <div class="app" id="twitter">
+                    <img src="img/twitter.png" class="logo smaller">
+                    <h1 class="app-name">Twitter</h1>
+                </div>
+                <div class="app" id="illumination">
+                    <img src="img/illumination.png" class="logo invert smallest">
+                    <h1 class="app-name smaller">Illumination App</h1>
+                </div>
+            </div>
+        </div>
+        <div class="add-action info">
+            <div class="label">
+                <!--<img src="img/spotify.png" class="logo">-->
+                <!--APP IMAGE-->
+                <!--<h1 class="app-name">Spotify</h1>-->
+                <!--APP NAME-->
+            </div>
+            <h2 class="subtitle">Select the action</h2>
+            <div class="actions">
+                <!--ACTION TEMPLATE-->
+                <div class="app" id="spotify">
+                    <div class="action">
+                        <h1 class="action-name">Play/Stop the music</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Next song</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Previous song</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">More Volume</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Less Volume</h1>
+                    </div>
+                </div>
+                <div class="app" id="nest">
+                    <div class="action">
+                        <h1 class="action-name">Activate/Deactivate security camera</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Display/Hide security footage in Smart TV</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Increase thermostat heat</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Decrease thermostat heat</h1>
+                    </div>
+                </div>
+                <div class="app" id="phone">
+                    <div class="action">
+                        <h1 class="action-name">Play sound</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Send location by e-mail</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Change to Lost Mode</h1>
+                    </div>
+                </div>
+                <div class="app" id="facebook">
+                    <div class="action">
+                        <h1 class="action-name">Display/Hide facebook in Smart TV</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Play notifications</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Give/Remove a like</h1>
+                    </div>
+                </div>
+                <div class="app" id="twitter">
+                    <div class="action">
+                        <h1 class="action-name">Display/Hide twitter in Smart TV</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Play latest tweets</h1>
+                    </div>
+                    <div class="action">
+                        <h1 class="action-name">Retweet</h1>
+                    </div>
+                </div>
+                <div class="app" id="illumination">
+                    <div class="action">
+                        <h1 class="action-name">Turn on/off light</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sequence info">
+            <div class="label">
+                <!--<img src="img/spotify.png" class="logo">-->
+                <!--APP IMAGE-->
+                <!--<h1 class="app-name">Spotify</h1>-->
+                <!--APP NAME-->
+            </div>
+            <div class="action">
+                <!--<h1 class="action-name">Play/Stop the music</h1>-->
+                <!--ACTION NAME-->
+            </div>
+            <div class="bottom">
+                <div class="sequence-keyboard">
+                    <h1 class="instruction">INTRODUCE SEQUENCE</h1>
+                    <div class="options">
+                        <img class="option" id="dot" src="img/dot.png">
+                        <img class="option" id="line" src="img/line.png">
+                    </div>
+                    <div class="selected">
+
+                    </div>
+                    <!--SAVE FOR LATER-->
+                </div>
+
+                <img class="del" src="img/del.png" style="display: none;">
+                <div class="error"></div>
+                <div class="button">FINISH</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        //Send info to the login for update
+        //In case no user has logged in
+        if (!store.get('logged-in-user')) {
+            window.location.href = 'index.html';
+        } else {
+            window.localStorage.setItem('user-update', null);
+            window.localStorage.setItem('number', 0);
+            store.set('user-update', store.get('user'));
+            store.set('number', store.get('id'));
+        }
+        //Set knockis
+        if (store.get('tot-knockis') == null) {
+            store.set('tot-knockis', 0);
+        }
+        if (store.get('tot-gestures') == null) {
+            store.set('tot-gestures', 0);
+        }
+        if (store.get('tot_rooms') == null) {
+            store.set('tot_rooms', 0);
+        }
+
+        console.log("Updated to: " + store.get("user").number_Knockis);
+        //Set some fixed info
+        console.log(store.get('user').name);
+        $('#slide .name').text(store.get('user').name);
+        $('#slide .surname').text(store.get('user').surname);
+        $('#slide .nKnockis').text(store.get('user').number_Knockis);
+
+        $('#profile .name').text(store.get('user').name);
+        $('#profile .surname').text(store.get('user').surname);
+        $('#profile .email').text(store.get('user').email);
+        $('#profile .nKnockis').text(store.get('user').number_Knockis);
+        //Functions
+
+
+        function displayRoom() {
+            console.log(store.get('tot_rooms'));
+            $('#add-info #rooms-list').empty();
+            $('#add-info .selection-room .available').text("Available rooms");
+            for (var i = 1; i <= store.get('tot_rooms'); i++) {
+                //First, check if they match the user
+                var temp_room = store.get('room-' + i);
+                if (temp_room.owner == store.get('logged-in-user')) {
+                    //D
+                    $('#add-info #rooms-list').append(`  <div class="room" id='${store.get('room-'+i).name} ${'room-'+i}'>
+                                <img class="${store.get('room-'+i).imgClass}" src="img/${store.get('room-'+i).imgRoom}.png">
+                                <h1 class="name">${store.get('room-'+i).room}</h1>
+                            </div>`);
+                    console.log("Added room");
+                }
+            }
+        }
+
+        function assignKnocki(roomID, knockiN) {
+            $(`${roomID} .knockisIn`).append(`
+                <div class="knocki" id="knocki-${knockiN}">
+                    <img class="photo" src="img/knocki.png">
+                    <div class="k-info">
+                        <h1 class="location"></h1>
+                        <h2 class="#gestures"><span class="number"></span> gestures</h2>
+                    </div>
+                </div>
+            `);
+            $(`#knocki-${knockiN} .k-info .location`).text(store.get("knocki-" + knockiN).location);
+            $(`#knocki-${knockiN} .k-info .number`).text(store.get("knocki-" + knockiN).nGestures);
+            console.log("Displaying knocki-" + knockiN);
+        }
+        var rooms = 1;
+        var back = true;
+        var plus = true;
+
+        function displayKnockis() {
+            //EMpty all
+            $('#rooms').empty();
+            $(`.knockisIn`).empty();
+            console.log("Empty");
+            rooms = 1;
+            var image = "";
+            var classImage = "";
+            for (var i = 1; i <= store.get('tot-knockis'); i++) {
+                console.log("Tryin knocki-" + i);
+                console.log("# ROOMS: " + rooms);
+                var temp_knocki = store.get('knocki-' + i);
+                if (temp_knocki.owner == store.get('logged-in-user')) {
+                    //create the rooms if there are no rooms
+                    //Assign the image value
+                    for (var j = 1; j <= store.get('tot_rooms'); j++) {
+                        if (store.get('knocki-' + i).room == store.get('room-' + j).room) {
+                            classImage = store.get('room-' + j).imgClass;
+                            image = store.get('room-' + j).imgRoom;
+                            console.log("imgClass= " + classImage + " classImage= " + image);
+                        }
+                    }
+                    if (i == 1) {
+                        $('#rooms').append(`
+                                <div class="room" id='room-${rooms}'>
+                                    <div class="room-info">
+                                        <div class="img">
+                                        </div>
+                                        <h1 class="name"></h1>
+                                        <img class="key" src="img/arrow.png"> 
+                                    </div>
+                                    <div class="knockisIn">
+                                    </div>
+                                </div>`);
+                        //Assign img and name values
+                        $('#room-1 .room-info .name').text(store.get('knocki-1').room);
+                        $('#room-1 .room-info .img').prepend(`<img class='room-img ${classImage}' src="img/${image}.png">`);
+                        //Now assign the knocki to the room
+                        assignKnocki("#room-" + 1, 1);
+                        var knockiID = "";
+                        knockiID = "knocki-1";
+                        store.set();
+                        store.update(knockiID, function(knockiID) {
+                            (knockiID).roomNumber = 1;
+                        });
+                    }
+                    //If there are another rooms, check if it matches a user's room
+                    else {
+                        var matches = false;
+                        for (var j = 1; j < i; j++) {
+                            //If it matches then assign it, do not create another room
+                            if (temp_knocki.room == store.get('knocki-' + j).room && store.get('knocki-' + j).owner == store.get('logged-in-user')) {
+                                matches = true;
+                                console.log("It matches the room");
+                                //Check whith which room it matched
+                                var matched = store.get(('knocki-' + j)).roomNumber;
+                                console.log(matched);
+                                assignKnocki("#room-" + matched, i);
+                                break;
+                            }
+                        }
+                        //If it doesn't match another room, create a new one
+                        if (matches == false) {
+                            rooms++;
+                            console.log("# ROOMS: " + rooms);
+                            $('#rooms').append(`
+                                <div class="room" id='room-${rooms}'>
+                                    <div class="room-info">
+                                        <div class="img">
+                                        </div>
+                                        <h1 class="name"></h1>
+                                        <img class="key" src="img/arrow.png"> 
+                                    </div>
+                                    <div class="knockisIn">
+                                    </div>
+                                </div>`);
+                            //Assign img and name values
+                            var newRoom = (store.get(`knocki-${i}`)).room;
+                            console.log(newRoom);
+                            $(`#room-${rooms} .room-info .name`).text(newRoom);
+                            $(`#room-${rooms} .room-info .img`).prepend(`<img class='room-img ${classImage}' src="img/${image}.png">`);
+                            //Now assign the knocki to the room
+                            assignKnocki("#room-" + rooms, i);
+                            var knockiID = "";
+                            knockiID = "knocki-" + j;
+                            store.set();
+                            store.update(knockiID, function(knockiID) {
+                                (knockiID).roomNumber = rooms;
+                            });
+                        }
+                    }
+                    if (temp_knocki.enabled == false) {
+                        var selected = "knocki-" + i;
+                        deleteKnocki(selected);
+                        //var roomToDelete='#room-'+store.get('knocki-'+i).roomNumber;
+                        //$(`${roomToDelete} #knockisIn`).append("<p>No Knockis in</p>");
+                        //console.log("To delete: "+ roomToDelete);
+                        console.log("removed");
+
+                    }
+                    if (temp_knocki.status == "off") {
+                        $('#knocki-' + i).css('opacity', '0.5');
+                    }
+                }
+            }
+            checkRooms();
+        }
+
+        function checkRooms() {
+            for (var i = 1; i <= store.get('tot_rooms'); i++) {
+                if ($(`#room-${i} .knockisIn`).children().length == 0) {
+                    console.log("Deleting room-" + i);
+                    $("#room-" + i).remove();
+                }
+            }
+        }
+        if (store.get('knocki-1')) {
+            displayKnockis();
+
+        }
+        if (store.get('room-1')) {
+            displayRoom();
+        }
+        var dot = '<img src="img/dot.png">';
+        var line = '<img src="img/line.png">';
+
+        function displayGestures(knockiSelection) {
+            $('#knocki-details .gestures .gesture-list').empty();
+            console.log("Empty");
+            for (var i = 1; i <= store.get('tot-gestures'); i++) {
+                var app = store.get('gesture-' + i).app;
+                var appName = (app.charAt(0)).toUpperCase() + app.substring(1, app.length + 1);
+                var action = store.get('gesture-' + i).action;
+                var classSelected = store.get('gesture-' + i).className;
+                //First, check if it is from the user
+                console.log("Tryin gesture-" + i);
+                var temp_gesture = store.get('gesture-' + i);
+                if (temp_gesture.owner == store.get('logged-in-user')) {
+                    console.log('it matches the user');
+                    //Second, match it with the respective knocki
+                    if (temp_gesture.knocki == knockiSelection) {
+                        console.log("It matches the " + knockiSelection)
+                        //If it is the first gesture
+
+                        console.log('gesture' + i);
+                        $('#knocki-details .gestures .gesture-list').append(`
+                                <div class="gesture" id='ges-${i}'>
+                                    <!--<label class="container">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </label>-->
+                                    <img src="img/${app}.png" class="logo">
+                                    <div class="detail">
+                                        <div class="combo">
+                                        </div>
+                                        <h1 class="app">${appName}</h1>
+                                        <h2 class="action">${action}</h2>
+                                    </div>
+                                </div>`);
+                        //Assign sequence values
+                        console.log(store.get('gesture-' + i).sequence);
+                        for (var j = 0; j < (store.get('gesture-' + i)).sequence.length; j++) {
+                            if ((store.get('gesture-' + i)).sequence.charAt(j) == 'd') {
+                                console.log("Writting dot");
+                                $(`#knocki-details .gestures .gesture-list #ges-${i} .combo`).append(dot);
+                            }
+                            if ((store.get('gesture-' + i)).sequence.charAt(j) == 'l') {
+                                console.log("Writting line");
+                                $(`#knocki-details .gestures .gesture-list #ges-${i} .combo`).append(line);
+                            }
+                        }
+                        //Assign the img classes
+                        $(`#knocki-details .gestures .gesture-list #ges-${i} .logo`).removeClass('logo').addClass(classSelected);
+                    }
+                }
+            }
+
+        }
+        //show/hide
+        //MENU
+        $('#btn-menu').click(function() {
+            //$('nav #menu-options ul').slideToggle();
+            $('.menu').toggleClass('show');
+
+            if ($('#btn-menu').attr('class') == 'hamburger_menu active' || $('#btn-menu').attr('class') == 'active hamburger_menu') {
+                $('#btn-menu').removeClass('hamburger_menu active').addClass('hamburger_menu close');
+                plus = false;
+            } else {
+                $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+                plus = true;
+            }
+        });
+        $('#knockis').on('click', function() {
+            $('section').hide();
+            $('#principal').show();
+            $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+            $('.menu').removeClass('show');
+            $('.hamburger_menu').show();
+            $('#plus').show();
+            $('#knockilogosmall').css("margin", "0 15%");
+            $('#plus').css('opacity', '1');
+        });
+        $('#account').on('click', function() {
+            $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+            $('.menu').toggleClass('show');
+            $('#principal').hide();
+            $('#profile').hide();
+            $('section#settings').hide();
+            $('#profile').show();
+            $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+            $('.menu').removeClass('show');
+            $('#plus').css('opacity', '0');
+            plus = false;
+        });
+        $('li#settings').on('click', function() {
+            $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+            $('.menu').toggleClass('show');
+            $('#principal').hide();
+            $('#profile').hide();
+            $('section#settings').hide();
+            $('section#settings').show();
+            $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+            $('.menu').removeClass('show');
+            $('#plus').css('opacity', '0');
+            plus = false;
+        });
+        $('#knockilogosmall').click(function() {
+            if (back) {
+                plus = true;
+                $('section').hide();
+                $('#principal').show();
+                $('#plus').show();
+                $('#plus').css('opacity', '1');
+                $('#knockilogosmall').css("margin", "0 15%");
+            }
+        });
+        $('.settings .switch .slider').click(function() {
+            $(this).toggleClass('inactive');
+            if ($(this).hasClass('inactive')) {
+                $(this).children('input').prop('checked', false);
+            } else {
+                $(this).children('input').prop('checked', true);
+            }
+            if ($(this).attr('id') == "s-1") {
+                console.log("S-1");
+
+            }
+            if ($(this).attr('id') == "s-2") {
+                console.log("S-2");
+            }
+            if ($(this).attr('id') == "s-3") {
+                console.log("S-3");
+            }
+        });
+
+
+        //Add knockis
+        var id = "";
+        $('#plus').click(function() {
+            if (!plus) {
+                return false;
+            }
+            id = "";
+            back = false;
+            $('#menu-up').css('position', 'static');
+            $('section').hide();
+            $('#add').show();
+            $('.hamburger_menu').hide();
+            $('#plus').hide();
+            $('#knockilogosmall').css("margin", "0 auto");
+            $('#knockilogosmall').css("padding", "0 20% 3% 20%");
+            $('#knockilogosmall').css("border-bottom", "1px solid grey");
+            $('#add').delay(5000).hide(0);
+            $('#detected').delay(5000).show(0);
+            setTimeout(function() {
+                console.log("detected");
+            }, 5000);
+            var chars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+            var random = 0;
+            for (var i = 0; i < 7; i++) {
+                random = Math.floor((Math.random() * 36));
+                id += chars[random];
+            }
+            $('#detected h2').text("");
+            $('#detected h2').text("ID: " + id);
+        });
+        //To add rooms
+        var room = "";
+        var imgRoom = "";
+        var imgClass = "";
+        $('body').on('click', '#add-info .selection-room #rooms-list .room', function() {
+            $('#add-info .selection-room #rooms-list .room').removeClass('selected');
+            $(this).toggleClass('selected');
+            room = $(this).children().text();
+            console.log("Selecting room: " + room);
+        });
+        $('#add-info #create #selection-images .image').click(function() {
+            imgClass = $(this).attr('class');
+            $('#add-info #create #selection-images .image').removeClass('selected');
+            $(this).addClass('selected');
+            imgRoom = $(this).attr('id');
+            console.log(imgRoom);
+            console.log(imgClass);
+        });
+        $('#add-info .selection-room #add').click(function() {
+            $('#add-info .selection-room #add').hide();
+            $('#add-info #create').slideToggle();
+            $('#add-info .available').hide();
+            $('#add-info #rooms-list').slideToggle();
+            $('#add-info .selection-room #accept').show();
+        });
+        $('#add-info .selection-room #accept').click(function() {
+            //Add the room
+            $('#add-error').text("");
+            error = false;
+            if ($('#add-info #create .form').val() == "") {
+                error = true;
+                $('#room').css('border-bottom', "1px solid red");
+            }
+            if ($('#add-info #create .form').val() != "") {
+                $('#room').css('border-bottom', "1px solid black");
+            }
+            if (error) {
+                $('#add-error').text("Choose a name for the room");
+                return false;
+            }
+            if (imgRoom == "") {
+                error = true;
+                $('#add-info #create #selection-images h1').css('color', "red");
+            }
+            if (imgRoom != "") {
+                $('#add-info #create #selection-images h1').css('color', "#333");
+            }
+            if (error) {
+                $('#add-error').text("Select an image for the room");
+                return false;
+            }
+            store.set('tot_rooms', store.get('tot_rooms') + 1);
+            var updater = "";
+            updater = "user";
+            store.set();
+            store.update(updater, function(updater) {
+                (updater).number_rooms = store.get('user').number_rooms + 1;
+            });
+            room = $('#add-info #create .form').val();
+            $('#add-info #create .form').val("");
+            $('#add-info #create #selection-images .image').removeClass('selected');
+            console.log('room');
+            var temp_room= room;
+            var rm="";
+            for(var i=0; i<temp_room.length; i++){
+                if(temp_room.charAt(i)==" "){
+                    rm=rm.toLowerCase()+"_";
+                }
+                else{
+                    rm=rm+temp_room.charAt(i).toLowerCase();
+                }
+            }
+            console.log(rm);
+            store.set('room-' + store.get('tot_rooms'), {
+                owner: store.get('logged-in-user'),
+                imgRoom: imgRoom,
+                imgClass: imgClass,
+                room: room,
+                name: rm,
+                status: 'on',
+                enabled: true
+            });
+            displayRoom();
+            $('#add-info #create').slideToggle();
+            $('#add-info .available').show();
+            $('#add-info #rooms-list').slideToggle();
+            $('#add-info .selection-room #accept').hide();
+        });
+        $('#detected #register').click(function() {
+            $('section').hide();
+            $('#add-info').show();
+            $('#add-info .selection-room #rooms-list .room').removeClass('selected');
+            $('#add-info .selection-room .id').text("ID: " + id);
+            $('#add-info .selection-room #add').show();
+            displayRoom();
+        });
+        $('#finish').click(function() {
+            var error = false;
+            $('#fnsh').text("");
+            //Check that all fields are not empty
+
+            if ($('#location').val() == '') {
+                $('#location').css('border-bottom', "1px solid red");
+                error = true;
+            }
+            if ($('#location').val() != '') {
+                $('#location').css('border-bottom', "1px solid black");
+            }
+            if (error) {
+                //display error message
+                $('#fnsh').text("Please fill all the fields");
+                return false;
+            }
+            if (room == "") {
+                error = true;
+                $('#add-info .selection-room .available').css('color', 'red');
+            }
+            if (room != "") {
+                $('#add-info .selection-room .available').css('color', '#555');
+            }
+            if (error) {
+                //display error message
+                $('#fnsh').text("Select an available room");
+                return false;
+            }
+            
+            //---------------------------------------------------------------------------------------
+            //Store all values
+            //ONLY when clicked this button and no errors, it will create the object
+            //UPDATE 'tot-knockis'
+            store.set('tot-knockis', store.get('tot-knockis') + 1);
+            console.log("TOTAL KNOCKIS: " + store.get('tot-knockis'));
+            //SAVE ALL KNOCKI INFO
+            store.set('knocki-' + store.get('tot-knockis'), {
+                owner: store.get('logged-in-user'),
+                knockiID: id,
+                room: room,
+                roomNumber: 1,
+                location: $('#add-info #location').val(),
+                nGestures: 0,
+                status: 'on',
+                enabled: true,
+            });
+            console.log(store.get('knocki-' + store.get('tot-knockis')));
+            //If no errors, continue
+            $('section').hide();
+            $('#room').val("");
+            $('#location').val("");
+            $('#name').val("");
+            $('#loading').show();
+            $('#loading').delay(6000).hide(0);
+            $('#ready').delay(6000).show(0);
+            $('section').delay(3000).hide(0);
+            $('#principal').delay(6000).show(0);
+            $('.hamburger_menu').delay(9000).show(0);
+            $('#plus').delay(9000).show(0);
+            setTimeout(function() {
+                $('#knockilogosmall').css("margin", "0 15%");
+                $('#menu-up').css('position', 'fixed');
+                $('#knockilogosmall').css("padding", "0");
+                $('#knockilogosmall').css("border-bottom", "none");
+            }, 9000);
+            displayKnockis();
+            //store.set('user', k);
+            //Update user's knockis
+            var updater = "";
+            updater = "user";
+            store.set();
+            store.update(updater, function(updater) {
+                (updater).number_Knockis = store.get('user').number_Knockis + 1;
+            });
+            console.log("Updated to: " + store.get('user').number_Knockis);
+            $('#slide .nKnockis').text(store.get('user').number_Knockis);
+            $('#profile .nKnockis').text(store.get('user').number_Knockis);
+            back = true;
+            //Update the user-update
+            store.set('user-update', store.get('user'));
+        });
+        //TO CANCEL
+        $('#add .bttn').click(function() {
+            back = true;
+            $('section').hide();
+            $('#principal').show();
+            $('#menu-up').css('position', 'fixed');
+            $('.hamburger_menu').show();
+            $('#plus').show();
+            $('#knockilogosmall').css("margin", "0 15%");
+
+            for (var i = 0; i < 2000; i++) {
+                $('#detected').hide();
+                $('#detected').delay(5).hide(0);
+            }
+        });
+        $('#add .bttn').click(function() {
+            back = true;
+            $('section').hide();
+            $('#principal').show();
+            $('.hamburger_menu').show();
+            $('#plus').show();
+            $('#knockilogosmall').css("margin", "0 15%");
+            $('#knockilogosmall').css("padding", "0");
+            $('#knockilogosmall').css("border-bottom", "none");
+
+        });
+        $('#detected #cancel').click(function() {
+            back = true;
+            $('section').hide();
+            $('#menu-up').css('position', 'fixed');
+            $('#principal').show();
+            $('.hamburger_menu').show();
+            $('#plus').show();
+            $('#knockilogosmall').css("margin", "0 15%");
+            $('#knockilogosmall').css("padding", "0");
+            $('#knockilogosmall').css("border-bottom", "none");
+        });
+        $('#add-info #cancel').click(function() {
+            back = true;
+            $('section').hide();
+            $('#menu-up').css('position', 'fixed');
+            $('#principal').show();
+            $('.hamburger_menu').show();
+            $('#plus').show();
+            $('#knockilogosmall').css("margin", "0 15%");
+            $('#knockilogosmall').css("padding", "0");
+            $('#knockilogosmall').css("border-bottom", "none");
+        });
+
+
+        //Add gesture
+        //Toggle
+        $('body').on('click', '.room-info', function() {
+            var id = $(this).parent().attr('id');
+            $(`#${id} .key`).toggleClass('open');
+            $(`#${id} .knockisIn`).slideToggle();
+        });
+        //Sections
+        var knockiSelected = "";
+        $('body').on('click', '.knockisIn .knocki', function() {
+            back = false;
+            knockiSelected = $(this).attr('id');
+            $('section').hide();
+            $('#knocki-details').show();
+            $('#knocki-details .info').hide();
+            if (store.get(knockiSelected).status == "on") {
+                //Entered
+                console.log("It is checked");
+                $('.bttns .switch input').prop('checked', true);
+            } else {
+                console.log("It is not checked");
+                $('.bttns .switch input').prop('checked', false);
+            }
+            $('#knocki-details').show();
+
+            $('#knocki-details .gestures').show();
+            $('#menu-up #plus').hide();
+            $('.hamburger_menu').hide();
+            $('#knockilogosmall').css("margin", "0 auto");
+            $('#menu-up').css('position', 'static');
+            $('#menu-up #back').show();
+            //Fill the info with this knocki
+
+            console.log("Access to " + knockiSelected);
+            var rm = store.get(knockiSelected).room;
+            var loc = store.get(knockiSelected).location;
+            var iD = store.get(knockiSelected).knockiID;
+            var ges = store.get(knockiSelected).nGestures;
+            $('#knocki-details .device .k-info').empty();
+            $('#knocki-details .device .k-info').append(`<h1 class="name">${rm}</h1>
+                                                        <h2 class="location">${loc}</h2>
+                                                        <h2 class="id">ID: ${iD}</h2>
+                                                        <h3 class="#gestures"><span class="number">${ges}</span> gestures</h3>`);
+            //Display all gestures
+            displayGestures(knockiSelected);
+        });
+        $('body').on('click', '#menu-up #back', function() {
+            back = true;
+            displayKnockis();
+            $('section').hide();
+            $('#principal').show();
+            $('.hamburger_menu').show();
+            $('#menu-up #plus').show();
+            $('#menu-up #back').hide();
+            $('#knockilogosmall').css("margin", "0 15%");
+            $('#menu-up').css('position', 'fixed');
+        });
+        //TO move sections to add gesture
+        //Add gesture page
+        var appSelected = "";
+        var classes = "";
+        var appSelectedName = "";
+        var actionSelected = "";
+        $('body').on('click', '#knocki-details .gestures .label .plus', function() {
+            $('#knocki-details .info').hide();
+            $('#knocki-details .add-gesture').show();
+        });
+        $('body').on('click', '#knocki-details .add-gesture .apps .app', function() {
+            appSelected = $(this).attr('id');
+            appSelectedName = (appSelected.charAt(0)).toUpperCase() + appSelected.substring(1, appSelected.length + 1);
+            if (appSelected == 'phone') {
+                appSelectedName = "Find my phone";
+            }
+            if (appSelected == 'illumination') {
+                appSelectedName = "Illumination app";
+            }
+            console.log("App name: " + appSelectedName);
+            console.log(appSelected);
+            $('#knocki-details .info').hide();
+            $('#knocki-details .add-action').show();
+            //Clear the label and match the id
+            $('#knocki-details .add-action .label').empty();
+            $('#knocki-details .add-action .label').append(`<img src="img/${appSelected}.png" class="logo">
+                                                            <h1 class="app-name">${appSelectedName}</h1>`)
+            classes = $(`#knocki-details .add-gesture #${appSelected} img`).attr('class');
+            console.log(classes);
+            $('#knocki-details .add-action .label img').addClass(classes);
+            $('#knocki-details .add-action .actions .app').hide();
+            $(`#knocki-details .add-action .actions #${appSelected}`).show();
+        });
+        var tot_seq = 0;
+        $('body').on('click', '#knocki-details .add-action .actions .action', function() {
+            actionSelected = $(this).children().text();
+            console.log(actionSelected);
+            $('#knocki-details .sequence .label').empty();
+            $('#knocki-details .sequence .label').append(`<img src="img/${appSelected}.png" class="logo">
+                                                          <h1 class="app-name">${appSelectedName}</h1>`);
+            console.log(classes);
+            $('#knocki-details .sequence .label img').addClass(classes);
+            $('#knocki-details .sequence .action').empty();
+            $('#knocki-details .sequence .action').append(`<h1 class="action-name">${actionSelected}</h1>`);
+            $('#knocki-details .info').hide();
+            $('#knocki-details .sequence').show();
+            if (tot_seq == 0) {
+                $('.sequence .del').hide();
+            }
+        });
+        //Add sequence (dot / line)
+        var sequence = "";
+        $('body').on('click', '.sequence-keyboard .options .option', function() {
+            if (tot_seq < 8) {
+                $('.sequence .del').show();
+                console.log("True");
+                if ($(this).attr('id') == ('dot')) {
+                    console.log("dot");
+                    $('.sequence .sequence-keyboard .selected').append('<img class="selection dot" src="img/dot.png">');
+                    tot_seq++;
+                    sequence += "d";
+                    //Save the sequence
+                }
+                if ($(this).attr('id') == ('line')) {
+                    console.log("line");
+                    $('.sequence .sequence-keyboard .selected').append('<img class="selection line" src="img/line.png">');
+                    tot_seq++;
+                    sequence += "l";
+                    //Save the sequence
+                }
+                console.log("Sequence: " + sequence);
+                console.log("#Sequence inputs:" + tot_seq);
+            } else {
+                console.log("False");
+                //Display error
+                $('.sequence .error').text("The sequence can't be bigger");
+                setTimeout(function() {
+                    $('.sequence .error').text("");
+                }, 3000);
+                return false;
+            }
+        });
+        //To delete sequence
+        $('body').on('click', '.sequence .del', function() {
+            $(".sequence .sequence-keyboard .selected img:last-child").remove()
+            tot_seq--;
+            sequence = sequence.substring(0, sequence.length - 1);
+            console.log("Sequence: " + sequence);
+            console.log("#Sequence inputs:" + tot_seq);
+            if (tot_seq == 0) {
+                $('.sequence .del').hide();
+            }
+        });
+        //End
+        $('body').on('click', '#knocki-details .sequence .button', function() {
+            if (tot_seq != 0) {
+                back = true;
+                //Create gesture
+                store.set('tot-gestures', store.get('tot-gestures') + 1);
+                console.log("TOTAL GESTURES: " + store.get('tot-gestures'));
+                //SAVE ALL KNOCKI INFO
+                store.set('gesture-' + store.get('tot-gestures'), {
+                    owner: store.get('logged-in-user'),
+                    knocki: knockiSelected,
+                    sequence: sequence,
+                    app: appSelected,
+                    action: actionSelected,
+                    className: classes,
+                    status: 'on',
+                    enabled: true,
+                });
+                console.log(store.get('gesture-' + store.get('tot-gestures')));
+                //Add gesture
+                displayGestures(knockiSelected);
+                //Add the sequence to gesture list
+
+                //Delete the previous sequence
+                for (var i = 0; i < tot_seq; i++) {
+                    $(".sequence .sequence-keyboard .selected img:last-child").remove()
+                }
+                tot_seq = 0;
+                sequence = "";
+                $('#knocki-details .info').hide();
+                $('#knocki-details .gestures').show();
+                //Updtate gestures number
+                var updater = "";
+                updater = knockiSelected;
+                store.set();
+                store.update(updater, function(updater) {
+                    (updater).nGestures = store.get(knockiSelected).nGestures + 1;
+                });
+                //Update the display
+                //In #knocki-details
+                $('#knocki-details .device .k-info .number').empty();
+                $('#knocki-details .device .k-info .number').text(store.get(knockiSelected).nGestures);
+                //In the #principal
+                $(`#${knockiSelected} .k-info .number`).empty();
+                $(`#${knockiSelected} .k-info .number`).text(store.get(knockiSelected).nGestures);
+            } else {
+                $('.sequence .error').text("Introduce a sequence");
+                setTimeout(function() {
+                    $('.sequence .error').text("");
+                }, 3000);
+                return false;
+            }
+        });
+
+        function deleteKnocki(selected) {
+            $("#" + selected).remove();
+            console.log(selected + " deleted");
+            //if()
+        }
+        $('#eliminate').click(function() {
+            var updater = "";
+            updater = "user";
+            store.set();
+            store.update(updater, function(updater) {
+                (updater).number_Knockis = store.get('user').number_Knockis - 1;
+            });
+            console.log("Updated to: " + store.get('user').number_Knockis);
+            $('#slide .nKnockis').text(store.get('user').number_Knockis);
+            $('#profile .nKnockis').text(store.get('user').number_Knockis);
+            updater = knockiSelected;
+            store.set();
+            store.update(updater, function(updater) {
+                (updater).enabled = false;
+            });
+            back = true;
+            deleteKnocki(knockiSelected);
+            checkRooms();
+            $('section').hide();
+            $('#principal').show();
+            $('.hamburger_menu').show();
+            $('#menu-up #plus').show();
+            $('#menu-up #back').hide();
+            $('#knockilogosmall').css("margin", "0 15%");
+            $('#menu-up').css('position', 'fixed');
+        });
+        $('.bttns .switch .slider').click(function() {
+            console.log("Switch pushed");
+            $('.bttns .switch').toggleClass('inactive');
+            if (store.get(knockiSelected).status == "on" || store.get(knockiSelected).status == true) {
+                var updater = "";
+                updater = knockiSelected;
+                console.log(knockiSelected);
+                store.set();
+                store.update(updater, function(updater) {
+                    (updater).status = "off";
+                });
+            } else {
+                var updater = "";
+                updater = knockiSelected;
+                console.log(knockiSelected);
+                store.set();
+                store.update(updater, function(updater) {
+                    (updater).status = "on";
+                });
+            }
+            console.log("Status: " + store.get(knockiSelected).status);
+        });
+
+    </script>
+
+</body>
+
+
+</html>

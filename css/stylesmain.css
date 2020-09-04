@@ -1,0 +1,174 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #F8F8F8;
+}
+/*Header*/
+#knockilogosmall{
+  width: 40%;
+  display: inline-block;
+  margin-left: 70px;
+  margin-right: 58px;
+  margin-top: 20px;
+
+}
+
+#plus{
+  width: 7%;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 0;
+}
+
+#hamburguer{
+  width: 7%;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#yourknockis{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 200;
+  margin-top: 50px;
+  opacity: 0.7;
+}
+ /*Menu Kitchen*/
+.menu-1{
+  background-color: #D9F4EB;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.kitchen{
+  float: left;
+  width: 25px;
+  margin-left: 10px;
+}
+
+.arrow{
+float: right;
+width: 15px;
+margin-right: 10px;
+transform: rotate(-90deg);
+}
+
+.menu-1 p{
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 20px;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+/* displayed menu */
+.knocki1{
+  width: 50px;
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+nav{
+  background-color: #F0F5F4;
+  padding: 25px;
+}
+
+.a1 #title{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 60px;
+  margin-bottom: 2px;
+  color: #1C1C1C;
+  margin-top: 10px;
+}
+
+.a1 #subtitle{
+  font-weight: 200;
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 98px;
+  opacity: 0.8;
+}
+
+
+/*Menu bathroom*/
+.menu-2{
+  background-color: #D9F4EB;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.menu-2 p{
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 20px;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+.bathroom{
+  float: left;
+  width: 25px;
+  margin-left: 10px;
+}
+
+/*second displayed menu*/
+
+.knocki1{
+  width: 50px;
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.knocki2{
+  width: 50px;
+  float: left;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+
+.b2{
+  margin-right: 20px;
+}
+.title{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 60px;
+  margin-bottom: 2px;
+  color: #1C1C1C;
+  margin-top: 10px;
+}
+
+.subtitle{
+  font-weight: 200;
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 98px;
+  opacity: 0.8;
+}

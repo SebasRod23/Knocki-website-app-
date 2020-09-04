@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139072833-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139072833-1');
+    </script>
+    
+    <!-- Begin Inspectlet Asynchronous Code -->
+    <script type="text/javascript">
+    (function() {
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 707318181]);
+    var ldinsp = function(){
+    if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=707318181&r=' + Math.floor(new Date().getTime()/3600000); var x =     document.getElementsByTagName('script')[0];     x.parentNode.insertBefore(insp, x); };
+    setTimeout(ldinsp, 0);
+    })();
+    </script>
+    <!-- End Inspectlet Asynchronous Code -->
+    
+    <title>Welcome to Knocki</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/knocki.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/store.everything.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <img id=knockilogo src=" img/knockiapplogo.png" alt="">
+    <section id="main">
+        <div class="bttn" data-goto='#login'>LOG IN</div>
+        <img id=orline src="img/orline.png" alt="line or line">
+        <div class="bttn opac" data-goto='#create-account'>CREATE ACCOUNT</div>
+        <!--<form>
+            <input class="change-section button" data-goto='#login' type="button" id="login-btn" value="LOG IN">
+            <img id=orline src="img/orline.png" alt="line or line">
+            <input type="button" class="change-section button" id="createaccount-btn" value="CREATE ACCOUNT" class="change-section" data-goto='#create-account'>
+        </form>-->
+
+    </section>
+
+
+    <section id="login" style="display: none;">
+        <form>
+            <input id="typein" type="email" class="loginemail" placeholder="Email">
+            <input id="typein" type="password" class="pwd" placeholder="Password">
+            <h1 id="error"></h1>
+            <div class="button" id="buttonlogin">LOG IN</div>
+            <!--<input id="buttonlogin" type="button" class="button" id="create-account-btn" value="LOG IN">-->
+            <div>
+                <p>Don't have an account?</p>
+                <span class="change-section" data-goto='#create-account'>Create now!</span>
+            </div>
+        </form>
+    </section>
+    <section id="create-account" style="display: none;">
+        <form>
+            <h3>Sign up</h3>
+            <input class="name" type="text" id="typein" id="name" placeholder="Name">
+            <input class="surname" type="text" id="typein" id="surname" placeholder="Surname">
+            <input class="email" type="text" id="typein" id="email" placeholder="Email">
+            <input class="password" type="password" id="typein" placeholder="Password">
+            <input class="repeat" type="password" id="typein" placeholder="Repeat password">
+            <h1 id="error"></h1>
+            <div class="button" id="accountbutton" data-goto='#create-account'>CREATE YOUR ACCOUNT</div>
+            <!--<input id="accountbutton" type="button" class="button" data-goto='#create-account' id="create-account-btn" value="CREATE YOUR ACCOUNT">-->
+            <div>
+                <p>Already have an account?</p>
+                <span class="change-section" data-goto='#login'>Log in</span>
+            </div>
+
+        </form>
+    </section>
+
+    <script>
+        window.localStorage.setItem('logged-in-user', null);
+        window.localStorage.setItem('user', null);
+        window.localStorage.setItem('id', 0);
+        //Update changes
+        if(store.get('user-update')!=null){
+            store.set('user-'+store.get('number'),store.get('user-update'));
+        }
+        //Change SECTIONS
+        $('.bttn').on('click', function() {
+            $('section').fadeOut().delay(600);
+            $($(this).data('goto')).fadeIn();
+        });
+        $('span').on('click', function() {
+            $('section').fadeOut().delay(600);
+            $($(this).data('goto')).fadeIn();
+        });
+        
+        $('#accountbutton').on('click', function() {
+
+            var error = false;
+            $('#create-account h1#error').text("");
+            $('#create-account #typein').css('border', '1px solid #707070');
+            if ($('.name').val() == '') {
+                $('.name').css('border', '1px solid #ff0000');
+                error = true;
+            }
+            if ($('.surname').val() == '') {
+                $('.surname').css('border', '1px solid #ff0000');
+                error = true;
+            }
+            if ($('.email').val() == '') {
+                $('.email').css('border', '1px solid #ff0000');
+                error = true;
+            }
+
+            if ($('.password').val() == '') {
+                $('.password').css('border', '1px solid #ff0000');
+                error = true;
+            }
+            if ($('.repeat').val() == '') {
+                $('.repeat').css('border', '1px solid #ff0000');
+                error = true;
+            }
+            if (error) {
+                $('#create-account h1#error').text("Please fill all fields");
+                return false;
+            }
+            
+            error=true;
+            for(var i=0; i<$('.email').val().length; i++){
+                if($('.email').val().charAt(i)=='@'){
+                    console.log("Found @")
+                    error=false;
+                }
+            }
+            if (error) {
+                $('.email').css('border', '1px solid #ff0000');
+                $('#create-account h1#error').text("Invalid e-mail account");
+                return false;
+            }
+            
+            
+            error=false;
+            if($('.password').val().length<6){
+                $('.password').css('border', '1px solid #ff0000');
+                error=true;
+            }
+            if (error) {
+                $('#create-account h1#error').text("Passwords should be at least 6 characters");
+                return false;
+            }
+            if ($('.password').val() != $('.repeat').val()) {
+                $('.password').css('border', '1px solid #ff0000');
+                $('.repeat').css('border', '1px solid #ff0000');
+                error = true;
+            }
+            if (error) {
+                $('#create-account h1#error').text("The passwords don't match");
+                return false;
+            }
+            
+            //Check
+            if (store.get('tot-users')) {
+                //We have at least one user, check if the email matches another
+                error = false;
+                for (var i = 1; i <= store.get('tot-users'); i++) {
+                    console.log(store.get('user-' + i).email);
+                    if ($('.email').val() == store.get('user-' + i).email) {
+                        console.log("It matches user-" + i + ": " + store.get('user-' + i).email);
+                        error = true;
+                        break;
+                    }
+                }
+                if (error) {
+                    //the email has been taken
+                    $('#create-account h1#error').text("The e-mail has already been taken");
+                    $('.email').css('border', '1px solid #ff0000');
+                    return false;
+                } else {
+                    //Set the user and increment total of users
+                    store.set('tot-users', store.get('tot-users') + 1);
+                    store.set('user-' + store.get('tot-users'), {
+                        email: $('.email').val(),
+                        name: $('.name').val(),
+                        surname: $('.surname').val(),
+                        password: $('.password').val(),
+                        number_Knockis:0,
+                        number_rooms:0,
+                        active: 'true'
+                    });
+                    console.log("New user created");
+                    console.log("user-" + store.get('tot-users') +
+                        " {e-mail: " + store.get('user-' + store.get('tot-users')).email +
+                        ", name: " + store.get('user-' + store.get('tot-users')).name +
+                        ", surname: " + store.get('user-' + store.get('tot-users')).surname +
+                        ", password: " + store.get('user-' + store.get('tot-users')).password +
+                        ", active: " + store.get('user-' + store.get('tot-users')).active + "}");
+                    //Go to login page
+                    $('section').hide();
+                    $('#login').show();
+                    $('.name').val("");
+                    $('.surnname').val("");
+                    $('.email').val("");
+                    $('.password').val("");
+                    $('.repeat').val("");
+                }
+            } else {
+                store.set('tot-users', 1);
+                store.set('user-1', {
+                    email: $('.email').val(),
+                    name: $('.name').val(),
+                    surname: $('.surname').val(),
+                    password: $('.password').val(),
+                    number_Knockis:0,
+                    number_rooms:0,
+                    active: 'true'
+                });
+                console.log("New user created");
+                console.log(store.get('user-1'));
+                $('section').hide();
+                $('#login').show();
+                $('.name').val("");
+                $('.surnname').val("");
+                $('.email').val("");
+                $('.password').val("");
+                $('.repeat').val("");
+            }
+        });
+
+        $('#buttonlogin').on('click', function() {
+            var error = false;
+            $('#login h1#error').text("");
+            $('#login #typein').css('border', '1px solid #707070');
+            if ($('.loginemail').val() == '') {
+                $('.loginemail').css('border', '1px solid #ff0000');
+                error = true;
+            }
+            if ($('.pwd').val() == '') {
+                $('.pwd').css('border', '1px solid #ff0000');
+                error = true;
+            }
+            if (error) {
+                $('#login h1#error').text("Please fill all fields");
+                return false;
+            }
+            //Check if it matches a user
+            error = true;
+            for (var i = 1; i <= store.get('tot-users'); i++) {
+
+                if ($('.loginemail').val() == store.get('user-' + i).email &&
+                    $('.pwd').val() == store.get('user-' + i).password) {
+
+                    console.log("It matched");
+                    error = false;
+                    store.set('logged-in-user', $('.loginemail').val());
+                    store.set('user', store.get('user-'+i));
+                    store.set('id', i);
+                    window.location.replace('main.html');
+                    console.log("Logged in with user: " + store.get('user-' + i).email);
+                    return false;
+                }
+            }
+            if (error) {
+                $('.loginemail').css('border', '1px solid #ff0000');
+                $('.pwd').css('border', '1px solid #ff0000');
+                $('#login h1#error').text("Wrong e-mail or password");
+                return false;
+            }
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

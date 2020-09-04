@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Benchmarking | The Tribe</title>
+    <link rel="shortcut icon" href="img/output-onlinepngtools.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="css/styleBenchmarking.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137186632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137186632-1');
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="menu-main">
+            <a href="index.html"><img src="img/output-onlinepngtools.png" class="logo"></a>
+            <a href="index.html" class="name">The <span>Tribe</span></a>
+            <div class="hamburger_menu active" id="btn-menu">
+                <span class="linea l1 "></span>
+                <span class="linea l2 "></span>
+                <span class="linea l3 "></span>
+            </div>
+        </div>
+        <div class="menu-options" id="menu-options">
+            <ul>
+                <li><a href="https://xd.adobe.com/embed/9e60e5b9-b4d2-4b27-5b7d-f9bfa8aeca45-e851/screen/37e09cbd-1649-413c-be7a-e7c7e2c6a085/Log-in/" target="_blank">Adobe XD</a></li>
+                <li><a href="personas.html">Personas</a></li>
+                <li><a href="benchmarking.html">Benchmarking</a></li>
+                <li><a href="prototype.html">Prototype</a></li>
+                <li><a href="tests.html">Tests</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrapper">
+
+        <div class="label">
+            <img src="img/3points.png">
+            <h1>OUR COMPETITION</h1>
+        </div>
+        <div class="competition">
+            <div class="picture" id="google">
+                <h1>Google Home</h1>
+                <img class="inactive" src="img/Google.png">
+            </div>
+            <div class="picture" id="kasa">
+                <h1>KASA</h1>
+                <img class="inactive" src="img/Kasa.png">
+            </div>
+            <h2>Select one</h2>
+            <div class="info" id="google-info">
+                <p class="paragraph">Google Home speakers enable users to speak voice commands to interact with services through Google's personal assistant software called Google Assistant. A large number of services are integrated, allowing users to listen to music, control playback of videos or photos, or receive news updates entirely by voice. Multiple Google Home devices can be placed in different rooms in a home for synchronized playback of music.</p>
+                <p class="price">Price: $1900-$2100</p>
+            </div>
+            <div class="info" id="kasa-info">
+                <p class="paragraph">You can control your smart plug from anywhere with your
+                    smartphone using the free application of Kasa (iOS, Android). Requires
+                    a secure Wi-Fi network connection of 2.4 GHz. It serves to turn on and off
+                    devices such as lights and fans at different times to give the appearance
+                    that someone is in the house while you are not.</p>
+                <p class="price">Price: $2500-$3500</p>
+            </div>
+        </div>
+        <div class="label">
+            <img src="img/3points.png">
+            <h1>SCREENSHOTS</h1>
+        </div>
+        <div class="screenshots">
+            <h1>From Google Home:</h1>
+            <div class="slider">
+                <div><img src="img/1b.PNG"></div>
+                <div><img src="img/2b.PNG"></div>
+                <div><img src="img/3b.PNG"></div>
+                <div><img src="img/4b.PNG"></div>
+            </div>
+            <h1>From Kasa:</h1>
+            <div class="slider">
+                <div><img src="img/1a.PNG"></div>
+                <div><img src="img/2a.PNG"></div>
+                <div><img src="img/3a.PNG"></div>
+                <div><img src="img/4a.PNG"></div>
+            </div><br>
+        </div>
+        <div class="label">
+            <img src="img/3points.png">
+            <h1>SO... WHAT MAKES US DIFFERENT?</h1>
+        </div>
+        <div class="difference">
+            <img src="img/knocki-background.jpg">
+            <div class="quote">
+                <h1>"If the goal of automatization is to simplify our lives, then why does it feels so complicated"</h1>
+                <h2>Jake, Knocki CEO</h2>
+            </div>
+            <p>Other technologies that depend on voice command are not as reliable as Knocki, because they can be trigger by accident, are confusing to use and don't always work as expected. That is why our technology doesn't use sound, instead we use the vibrations of knocking and it is able to recognize deliberate sound patterns from random vibrations. The beuty of our product is that it can turn any surface into a User Interface </p>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            /*Ham button menu*/
+            $('#btn-menu').click(function() {
+                $('nav #menu-options ul').slideToggle();
+                if ($('#btn-menu').attr('class') == 'hamburger_menu active') {
+                    $('#btn-menu').removeClass('hamburger_menu active').addClass('hamburger_menu close');
+                } else {
+                    $('#btn-menu').removeClass('hamburger_menu close').addClass('hamburger_menu active');
+                }
+            });
+            //Competition
+            $('#google img').click(function() {
+                $('#google-info').slideToggle();
+                if ($('#google img').attr('class') == 'inactive') {
+                    $('#google img').removeClass('inactive').addClass('active');
+                    if ($('#kasa img').attr('class') == 'active') {
+                        $('#kasa img').removeClass('active').addClass('inactive');
+                        $('#kasa-info').slideToggle();
+                    }
+                } else {
+                    $('#google img').removeClass('active').addClass('inactive');
+                }
+            });
+
+            $('#kasa img').click(function() {
+                $('#kasa-info').slideToggle();
+                if ($('#kasa img').attr('class') == 'inactive') {
+                    $('#kasa img').removeClass('inactive').addClass('active');
+                    if ($('#google img').attr('class') == 'active') {
+                        $('#google img').removeClass('active').addClass('inactive');
+                        $('#google-info').slideToggle();
+                    }
+
+                } else {
+                    $('#kasa img').removeClass('active').addClass('inactive');
+                }
+            });
+            $('.slider').bxSlider();
+        });
+
+    </script>
+
+</body>
+
+</html>
